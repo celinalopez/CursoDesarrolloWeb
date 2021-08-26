@@ -1,0 +1,188 @@
+_______________________________
+pseudoclases enlaces
+-------------------------------
+a:hover{} 	#mouse por encima
+a:link{}	#enlace todavia no abierto
+a:visited{} 	#enlace ya abierto
+a:active{}	#estado del enlace cuando se hace click
+_______________________________
+psedoelementos
+-------------------------------
+-se accede con ::
+ejemplo p::first-letter{}
+	p::first-line{}
+*::selection (lo que se selecciona)
+.caja::before{} (contenido antes de la caja)
+_______________________________
+unidades medidas
+-------------------------------
+.px	.em	.rem	.%
+
+posicionamiento
+-------------------------------
+.normal(static)	 .relativo(relative)  .absoluto(absolute)  .fijo(fixed)  
+.flotante(float)  
+_______________________________
+display enlaces
+-------------------------------
+.inline	.block	.none	.inline-block	.flex
+_______________________________
+bordes
+-------------------------------
+.solid  .dotted  .dashed  .double || .groove  .ridge  .inset  .outset
+_______________________________
+listas
+-------------------------------
+.list-style: .none  .disc  .circle  .square |list-style-image|
+.list-style: .lower-roman  .upper-roman  .upper-latin
+_______________________________
+tablas
+-------------------------------
+tabla{border-collapse:collapse;} (unifica bordes)
+_______________________________
+transform
+-------------------------------
+.tanslate  .scale  .rotate(deg)  .skew(deg)
+_______________________________
+transition (para cambios de tamaño, color, etc)
+-------------------------------
+.all  
+.background(1s ease)     ease|linear|ease-in|ease-out|ease-in-out
+.transition-delay:2s 
+_______________________________
+animaciones
+------------------------------- 
+@keyframes colores{
+	from{background: #sdjkfs;}
+	to{background: #sjkdflk;}
+}
+.caja{ 
+animation-name: colores;
+animation-duration: 5s;
+animation-iteration-count: infinite;
+}
+_______________________________
+Diseño adaptable
+-------------------------------
+1° Meta viewport---> en head meta:vp +TAB
+2° poner medidas en porcentajes
+3° Mediaqueries ----> @media screen and (max-width: 235px){}
+_______________________________
+Flexbox
+-------------------------------
+----Contenedor padre
+.display: flex; #activa flex
+.flex-direction: row #por defecto| row-reverse | column | column-reverse
+.flex-wrap: wrap #default | no-wrap | wrap-reverse
+.flex-flow -> atajo direction+wrap 
+.justify-content: felx-start #default | flex-end | center | space-between | space-around
+.align-items: flex-start #default | flex-end | center | stretch | baseline
+.align-content: flex-start | flex-emd | center | ... Es para mas de una linea 
+---Elementos hijo
+.order
+.flex-grow
+.flex-shrink #tamaño minimo
+.flex-basis #tamaño inicial
+________________________________
+SASS
+--------------------------------
+estilos.scss
+estilos.css
+---> consola de comandos con Ruby
+1. ir al directorio de los archivos con cd
+2. para que se sincronicen solos: sass --watch estilos.scss:estilos.css
+________________________________
+JAVASCRIPT
+--------------------------------
+document.write() 		#print
+console.log()			#print en consola
+var array = ['a','b','c']	#array
+array[1] ---> b			#acceso a un item
+array.lenght			#Longitud del array
+array.join("-")			#metodo Tostring()
+array.pop()			#elimina ultimo item
+array.shift()			#elimina primer item
+array.push("d")			#agrega item al final
+array.unshift("f")		#agrega item al principio
+array.concat(array2)		#concatena 2 arrays
+array.sort()			#ordena alfabeticamente~solo para texto~
+array.reverse()			#invierte el orden
+-------------------------------
+Condicionales:
+	.if-else	.switch(como en java)
+-------------------------------
+FOR (como en java)
+	.for(inicio; condicion; actualizacion){
+	 }
+	.for(variable in object){
+	 }
+-------------------------------
+WHILE(como en java)
+	.while(condicion){
+	 }
+	.do{
+	 }while(condicion);
+-------------------------------
+FUNCIONES
+	.function nombre(){
+	}
+	.(function(){
+	  ####codigo		#funcion autoinvocada
+	 }())
+
+*si no se declara "var" se convierte en variable ~global~
+------------------------------
+METODOS STRING
+cadena.length
+cadena.substring(pos-inicial,pos-final)
+cadena.substr(inicio,cantidad-char)
+cadena.replace(cadena, reemplazo)
+cadena.toUpperCase()
+cadena.toLowerCase()
+cadena.indexOf('char')		#ubicacion primera ocurrencia letra
+cadena.lastIndexOf('char')	#ubicacion, desde atras para adelante
+________________________________
+DOM (document object model)
+--------------------------------
+document.getElementsByTagName('etiqueta')
+caja[0].textcontent = 'hola mundo'	#cambia contenido
+caja[0].innetHTML = '<h1>Hola</h1>';	#cambia el codigo html
+document.getElementsByClassName('clase')
+document.getElementById('id')
+en consola:
+caja[0].textcontent = 'Hola mundo'	#cambia en la pagina, no en el archivo
+--------------Crear Nodo
+1. crear elemento: var caja = 
+	document.createElement('div')
+2. crear texto: var contenido = 
+	document.createTextNode('hola mundo')
+3. juntar: 
+	caja.appendChild(contenido)
+4. agregar atributos y posicionarlo 
+	caja.setAttribute('class','caja naranja')
+5.posicionar en documento:
+	var contenedor = document.getElementById('contenedor')
+	contenedor.appendChild(contenedor)
+	o
+	contenedor.insertBefore()
+-----------Modificar clase o id de un elemento
+caja.id = 'nuevoId'	
+caja.className = 'nuevaClase'	#reemplaza clases
+.parentNode			#conocer elemento padre
+padre.insertBefore(nuevoElemento, AntesDeElemento)
+padre.replaceChild(elementoNuevo,elementoReemplazado[])
+padre.removeChild(elementoEliminado[])
+-----------Eventos
+1.Modelo Basico de eventos
+2.Modelo Estandar de eventos
+3.Modelo de eventos de Internet Explorer
+
+<button id="btn-saludar">Saludo</button>
+---script
+var btnSaludar = document.getElementById('id-saludar')
+btnSaludar.addEventListener('click',FuncionSaludo)
+btn.Saludar.removeEventListener('type', funcion)
+#FuncionAnonima
+btnSaludar.addEventListener('click',function(){
+	//codigo
+})

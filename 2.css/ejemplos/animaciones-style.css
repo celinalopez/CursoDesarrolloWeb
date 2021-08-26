@@ -1,0 +1,36 @@
+@keyframes colores{
+    from{background: #9eb3c2;}
+    to{background: #21295c;}
+}
+@keyframes colores2{
+    0%{background: #9eb3c2}
+    25%{background: #1c7293}
+    50%{background: #065a82}
+    75%{background: #1b3b6f}
+    100%{background: #21295c}
+}
+@keyframes movimiento{
+    0%{transform: translate(0px)}
+    50%{transform: translate(500px)}
+    100%{transform: translate(0px)}
+}
+
+.caja{
+    width: 200px;
+    height: 200px;
+    animation-name: colores;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+.caja2{
+    width: 200px;
+    height: 200px;
+    animation-name: colores2;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+.div{
+    display: inline-block;
+    padding: 20px;
+    margin: 20px;
+}

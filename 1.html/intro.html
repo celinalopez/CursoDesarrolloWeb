@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>PrimeraPagina</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1> Hola que tal </h1>
+        <!--PARRAFOS-->
+        <p>
+            <!--ETIQUETAS DE TEXTO-->
+            <b> negritas, sin importancia semantica</b>
+            <strong>Strong indica importancia semantica</strong>
+            <!-- br salto de linea-->
+            <br>
+            Br es un salto de linea
+            <i> italic, sin importancia semantica </i>
+            <em> enfasis, italic con importancia semantica </em>
+            <small>Small</small>
+            <mark>texto marcado</mark>
+            <del>Texto tachado, indica texto eliminado</del>
+            <ins>Subrayado, indica texto nuevo</ins>
+            <sub> subscript agrega texto pequeña abajo</sub>
+            <sup>superscrip agrega texto pequeño arriba </sup>
+        </p>
+        <h2>todo bien master</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
+            aspernatur cupiditate debitis eaque
+            <br>
+            eligendi et fugiat ipsa magni
+            maiores necessitatibus neque nobis, nulla numquam officiis possimus
+            quos, temporibus velit veniam.</p>
+        <!--ENLACES-->
+        <a href="https://www.google.com"> <h1>Ir a google</h1></a>
+        <br />
+        <a target="_blank" href="https://www.facebook.com"> Abrir facebook en otra pestaña</a>
+        <br>
+    <!--LISTAS-->
+        <h3>Lista desordenada</h3>
+        <ul>
+        <!--"list item" -->
+            <li> HTML </li>
+            <li> CSS </li>
+            <li> JavaScript </li>
+        </ul>
+
+        <h3>Lista ordenada</h3>
+        <ol> HTML</ol>
+        <ol> CSS </ol>
+        <ol> JavaScript</ol>
+
+        <h3>Lista Anidada</h3>
+        <ol>
+            <li> HTML </li>
+            <li> CSS
+                <ul>
+                    <li> Responsive Design</li>
+                    <li> Flexbox </li>
+                </ul>
+            </li>
+            <li> JavaScript </li>
+        </ol>
+            <h3>Menu de navegacion (sin css)</h3>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contactos</a></li>
+        </ul>
+    <!--IMAGENES-->
+        <img src="img/imagen_prueba.jpg" width="200" alt="imagen no encontrada" title="cafecito y laptop">
+        <img src="img/imagen_prueba2.jpg" width="200" alt="Lucas Sankey" title="Lucas Sankey">
+        <!--click en imagen y lleva a un link-->
+        <a href="https://www.google.com">
+            <img src="img/imagen_prueba.jpg" width="200" alt="">
+        </a>
+
+    <!--TABLAS no muy utilizado-->
+        <table>
+            <tr>
+                <!--encabezado th-->
+                <th>Nombre:</th>
+                <th>Telefono:</th>
+
+            </tr>
+            <tr>
+                <td>Carlos Arturo</td>
+                <td>264819234</td>
+            </tr>
+            <tr>
+                <td>Alejandro Luis</td>
+                <td>234561345</td>
+            </tr>
+        </table>
+
+    <!--FORMULARIOS INPUT-->
+        <form action="recibe.php" method="">
+            <input type="text" id = nombre placeholder="Nombre" required name="nombre">
+            <br>
+            <input type="submit" name="enviar">
+            <br>
+            <input type="text" placeholder="Apellido" required>
+            <br>
+            <input type="text" placeholder="Nombre de hijo" disabled>
+            <br>
+            <input type="email" placeholder="correo" name="correo">
+            <br>
+            <textarea name="mensaje" id="mensaje" placeholder="mensaje" cols="30" rows="10"></textarea>
+            <br>
+            <input type="submit" name="enviar">
+            <br>
+            <select name="pais" id="pais">
+                <option value="mexico">Mexico</option>
+                <option value="argentina">Argentina</option>
+                <option value="chile">Chile</option>
+            </select>
+            <!--ese texto va a estar relacionado con el id-->
+            <label for="pais">Pais</label>
+            <br>
+            <input type="radio" name="genero" value="hombre" id="hombre"> <label for="hombre">Hombre</label>
+            <input type="radio" name="genero" value="mujer" id="mujer">Mujer <label for="mujer">Mujer</label>
+            <br>
+            <input type="checkbox" name="termins" id="terminos"><label for="terminos">Terminos y Condiciones</label>
+            <br>
+        </form>
+
+        <form action="" method="">
+            <input type="password" placeholder="Contraseña" maxlength="10" >
+            <br>
+            <input type="color" name="color">
+            <br>
+            <input type="number" placeholder="numero de la suerte" min="3" max="12">
+            <br>
+            <input type="range" min="0" max="10" name="rango">
+            <br>
+            <input type="url" name="url" placeholder="sitioweb">
+        </form>
+    <!--CITAS DE TEXTO-->
+        <h3>Blockquote</h3>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing
+            elit. Beatae cumque omnis optio pariatur quis? A
+            accusantium aliquid commodi consequuntur distinctio
+            dolorum ducimus est iste laudantium officia pariatur qui,
+            suscipit tempore.
+        </p>
+        <blockquote>
+            Lorem ipsum dolor sit amet, consectetur adipisicing
+            elit. Beatae cumque omnis optio pariatur quis? A
+            accusantium aliquid commodi consequuntur distinctio
+            dolorum ducimus est iste laudantium officia pariatur qui,
+            suscipit tempore.
+        </blockquote>
+        <!--barra horizontal-->
+        <hr>
+        <p>Sitio web creado por <cite> Celina Lopez</cite></p>
+
+    </body>
+</html>
